@@ -1,45 +1,61 @@
-# backend_for_students
-Este repositorio es creado con la base minima de un microservicio con NodeJS y Express 
+# Panel Frontend - Sistema de Gestion (Roles, Usuarios y Empleados)
 
-TENDREMOS LA SIGUIENTE DISTRIBUCIÓN DE CARPETAS DENTRO DEL PROYECTO,
-RECORDAR LO VISTO EN CLASE EN DONDE CADA CARPETA NOS AYUDA A TENER UN ORDEN EN NUESTROS ARCHIVOS.
+Este repositorio contiene la interfaz de usuario desarrollada con Vue 3 y Vite, conectada a una API RESTful con backend en Node.js/Express y base de datos relacional en PostgreSQL.
 
-├── src/
-│   ├── config/  **configuraciones del servidor
-│   │   └── env.js
-│   ├── controllers/
-│   ├── middlewares/
-│   ├── routes/
-│   │   └── health.routes.js  **rutas definidas
-│   ├── services/
-│   ├── app.js
-│   └── server.js
-├── tests/
-├── .env
-├── .env.example
-├── .gitignore
-└── package.json
+---
 
-Utilizaremos los siguientes dependencias
--> Express
--> cors
--> helmet
--> dotenv
+## Tecnologias Utilizadas
 
-y dependencias de desarrollo como lo son
--> nodemon
+* Vue 3 (Composition API con script setup)
+* Vite (Empaquetador y servidor de desarrollo rapido)
+* Axios (Cliente HTTP para el consumo de la API REST)
+* CSS3 (Diseno responsivo y personalizado)
 
-## Conexión a PostgreSQL
+---
 
-La conexión se configura mediante `URL_DB` en el archivo `.env`. Copia `.env.example`
-a `.env` y reemplaza el usuario, contraseña, host, puerto y nombre de la base de datos
-por los de tu instalación de PostgreSQL. No compartas ni subas el archivo `.env`.
+## Requisitos Previos
 
-Para Render, usa la **External Database URL** que aparece en el menú **Connect** de la
-base de datos; la URL interna solo funciona desde servicios Render en la misma región.
-La conexión usa TLS por defecto (`DB_SSL=true`). Para una base local que no tenga SSL,
-configura `DB_SSL=false`.
+Asegurate de tener instalado en tu equipo:
+* Node.js (Version 18 o superior recomendada)
+* Git
 
-La aplicación prueba la conexión al iniciar y la cierra al recibir `SIGINT` o
-`SIGTERM`. El módulo `src/database/postgres.database.js` exporta `client` para ejecutar
-consultas; usa parámetros (`$1`, `$2`, ...) en lugar de concatenar valores en SQL.
+---
+
+## Instalacion y Configuracion del Proyecto
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/MarcosNicio/22161179_NicioL_MarcosN_Front.git
+   ```
+
+2. Entra al directorio del proyecto:
+   ```bash
+   cd 22161179_NicioL_MarcosN_Front
+   ```
+
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+---
+
+## Ejecucion del Servidor de Desarrollo
+
+Para iniciar la aplicacion localmente en modo de desarrollo, ejecuta:
+
+```bash
+npm run dev
+```
+
+La aplicacion estara disponible por defecto en el navegador en la siguiente direccion:
+* http://localhost:5173
+
+---
+
+## Funcionalidades del Sistema
+
+* Gestion de Roles: Visualizacion de roles disponibles y formulario para la creacion de nuevos registros.
+* Gestion de Usuarios: Listado de usuarios del sistema y formulario de registro vinculado a roles mediante llaves foraneas.
+* Gestion de Empleados: Registro y administracion de datos de empleados vinculados a usuarios existentes del sistema mediante selectores dinamicos.
+* Manejo de Errores: Captura y visualizacion de respuestas del servidor ante restricciones de bases de datos o fallos de conexion.
