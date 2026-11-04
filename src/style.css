@@ -1,0 +1,120 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  color: white;
+  padding: 20px;
+  background-color: #111827;
+  min-height: 100vh;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+.error-msg {
+  background-color: #ef4444;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.success-msg {
+  background-color: #10b981;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.form-card {
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 4px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.btn-save {
+  background-color: #2563eb;
+}
+
+.btn-save:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-cancel {
+  background-color: #6b7280;
+  margin-left: 10px;
+}
+
+.table-container {
+  background-color: #1f2937;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #374151;
+  padding: 12px;
+  border-bottom: 1px solid #4b5563;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #374151;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-edit {
+  background-color: #eab308;
+  color: black;
+}
+
+.btn-edit:hover {
+  background-color: #ca8a04;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
